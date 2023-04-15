@@ -13,7 +13,7 @@ namespace Gestion_facturas.Models.DataModels
         [Required]
         public Users Users { get; set; } = new Users();
 
-        [Required]
+        
         public ICollection<Invoice> Invoices { get; set; } = new List<Invoice>();
 
     }

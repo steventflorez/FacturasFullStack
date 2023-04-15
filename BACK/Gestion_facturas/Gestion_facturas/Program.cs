@@ -5,6 +5,8 @@ using Gestion_facturas.DataAcces;
 using Microsoft.CodeAnalysis.Options;
 using Gestion_facturas;
 using Microsoft.OpenApi.Models;
+using Gestion_facturas.ServicesInterface;
+using Gestion_facturas.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -17,28 +19,33 @@ var connectionString = builder.Configuration.GetConnectionString(CONECTIONNAME);
 
 builder.Services.AddDbContext<FacturasDBContext>(Options => Options.UseSqlServer(connectionString));
 
+
 //7. add Service of the Container
 //TODO: 
 builder.Services.AddJwtTokenServices(builder.Configuration);
 
-// Add services to the container.
-
+//4. Add services to the container.
 builder.Services.AddControllers();
+builder.Services.AddScoped<IUsersService, UsersService>();
+
+
 
 //4. add Custom Services (folder Services )
 //builder.Services.AddScoped<IStudents>
-builder.Services.AddControllers();
+//builder.Services.AddControllers();
 //TODO: Add the rest of services
 
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
-builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
 
 //8 TODO: CONFIG SWAGGER TO TAKE CARE OF AUTORIZATION OF JWT
 builder.Services.AddAuthorization(option =>
 {
     option.AddPolicy("UserOnlyPolicy", policy => policy.RequireClaim("userOnly", "User"));
 });
+
+
+// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen();
 
 //9 config Swagger to take care of autorization of JWT
 builder.Services.AddSwaggerGen(options =>

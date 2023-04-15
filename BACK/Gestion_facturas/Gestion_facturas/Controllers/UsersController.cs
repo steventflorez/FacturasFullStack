@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Gestion_facturas.DataAcces;
 using Gestion_facturas.Models.DataModels;
+using Gestion_facturas.ServicesInterface;
 
 namespace Gestion_facturas.Controllers
 {
@@ -15,10 +16,13 @@ namespace Gestion_facturas.Controllers
     public class UsersController : ControllerBase
     {
         private readonly FacturasDBContext _context;
+        //service
+        private readonly IUsersService _usersService;
 
-        public UsersController(FacturasDBContext context)
+        public UsersController(FacturasDBContext context, IUsersService usersService)
         {
             _context = context;
+            _usersService = usersService;
         }
 
         // GET: api/Users

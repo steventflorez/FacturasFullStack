@@ -1,0 +1,195 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DirectedGraph GraphDirection="LeftToRight" xmlns="http://schemas.microsoft.com/vs/2009/dgml">
+  <Nodes>
+<Node Id="IModel" Label="FacturasDBContext" ChangeTrackingStrategy="ChangeTrackingStrategy.Snapshot" PropertyAccessMode="PropertyAccessMode.Default" ProductVersion="7.0.5" Annotations="BaseTypeDiscoveryConvention:DerivedTypes: System.Collections.Generic.Dictionary`2[System.Type,System.Collections.Generic.List`1[Microsoft.EntityFrameworkCore.Metadata.IConventionEntityType]]
+Relational:MaxIdentifierLength: 128
+RelationshipDiscoveryConvention:InverseNavigationCandidates: System.Collections.Generic.Dictionary`2[System.Type,System.Collections.Generic.SortedSet`1[System.Type]]
+SqlServer:ValueGenerationStrategy: IdentityColumn" Category="Model" Group="Expanded" />
+<Node Id = "Enterprise" Label="Enterprise" Name="Enterprise" BaseClass="" IsAbstract="False" ChangeTrackingStrategy="ChangeTrackingStrategy.Snapshot"  Annotations="Relational:TableName: Enterprise
+RelationshipDiscoveryConvention:NavigationCandidates: System.Collections.Immutable.ImmutableSortedDictionary`2[System.Reflection.PropertyInfo,System.ValueTuple`2[System.Type,System.Nullable`1[System.Boolean]]]" Category="EntityType" Group="Expanded" />
+<Node Id = "Invoice" Label="Invoice" Name="Invoice" BaseClass="" IsAbstract="False" ChangeTrackingStrategy="ChangeTrackingStrategy.Snapshot"  Annotations="Relational:TableName: Invoice
+RelationshipDiscoveryConvention:NavigationCandidates: System.Collections.Immutable.ImmutableSortedDictionary`2[System.Reflection.PropertyInfo,System.ValueTuple`2[System.Type,System.Nullable`1[System.Boolean]]]" Category="EntityType" Group="Expanded" />
+<Node Id = "Enterprise.Id" Label="Id (int)" Name="Id" Category="Property Primary" Type="int" MaxLength="None" Field="" PropertyAccessMode="PropertyAccessMode.Default" BeforeSaveBehavior="PropertySaveBehavior.Save" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="SqlServer:ValueGenerationStrategy: IdentityColumn" IsPrimaryKey="True" IsForeignKey="False" IsRequired="True" IsIndexed="False" IsShadow="False" IsAlternateKey="False" IsConcurrencyToken="False" IsUnicode="True" ValueGenerated="ValueGenerated.OnAdd" />
+<Node Id = "Enterprise.Invoices" Label="Invoices (*)" Name="Invoices" Category="Navigation Collection" Type="ICollection&lt;Invoice&gt;"  Field="" Dependent="Invoice" Principal="" Inverse="enterprise" PropertyAccessMode="PropertyAccessMode.Default" />
+<Node Id = "Enterprise.Users" Label="Users (1)" Name="Users" Category="Navigation Property" Type="Users"  Field="" Dependent="" Principal="Users" Inverse="" PropertyAccessMode="PropertyAccessMode.Default" />
+<Node Id = "Enterprise.Address" Label="Address (string)" Name="Address" Category="Property Required" Type="string" MaxLength="(100)" Field="" PropertyAccessMode="PropertyAccessMode.Default" BeforeSaveBehavior="PropertySaveBehavior.Save" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="MaxLength: 100" IsPrimaryKey="False" IsForeignKey="False" IsRequired="True" IsIndexed="False" IsShadow="False" IsAlternateKey="False" IsConcurrencyToken="False" IsUnicode="True" ValueGenerated="None" />
+<Node Id = "Enterprise.CreateAt" Label="CreateAt (DateTime)" Name="CreateAt" Category="Property Required" Type="DateTime" MaxLength="None" Field="" PropertyAccessMode="PropertyAccessMode.Default" BeforeSaveBehavior="PropertySaveBehavior.Save" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="" IsPrimaryKey="False" IsForeignKey="False" IsRequired="True" IsIndexed="False" IsShadow="False" IsAlternateKey="False" IsConcurrencyToken="False" IsUnicode="True" ValueGenerated="None" />
+<Node Id = "Enterprise.CreateBy" Label="CreateBy (string)" Name="CreateBy" Category="Property Required" Type="string" MaxLength="None" Field="" PropertyAccessMode="PropertyAccessMode.Default" BeforeSaveBehavior="PropertySaveBehavior.Save" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="" IsPrimaryKey="False" IsForeignKey="False" IsRequired="True" IsIndexed="False" IsShadow="False" IsAlternateKey="False" IsConcurrencyToken="False" IsUnicode="True" ValueGenerated="None" />
+<Node Id = "Enterprise.DeleteAt" Label="DeleteAt (DateTime?)" Name="DeleteAt" Category="Property Optional" Type="DateTime?" MaxLength="None" Field="" PropertyAccessMode="PropertyAccessMode.Default" BeforeSaveBehavior="PropertySaveBehavior.Save" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="" IsPrimaryKey="False" IsForeignKey="False" IsRequired="False" IsIndexed="False" IsShadow="False" IsAlternateKey="False" IsConcurrencyToken="False" IsUnicode="True" ValueGenerated="None" />
+<Node Id = "Enterprise.DeleteBy" Label="DeleteBy (string)" Name="DeleteBy" Category="Property Required" Type="string" MaxLength="None" Field="" PropertyAccessMode="PropertyAccessMode.Default" BeforeSaveBehavior="PropertySaveBehavior.Save" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="" IsPrimaryKey="False" IsForeignKey="False" IsRequired="True" IsIndexed="False" IsShadow="False" IsAlternateKey="False" IsConcurrencyToken="False" IsUnicode="True" ValueGenerated="None" />
+<Node Id = "Enterprise.IsDeleted" Label="IsDeleted (bool)" Name="IsDeleted" Category="Property Required" Type="bool" MaxLength="None" Field="" PropertyAccessMode="PropertyAccessMode.Default" BeforeSaveBehavior="PropertySaveBehavior.Save" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="" IsPrimaryKey="False" IsForeignKey="False" IsRequired="True" IsIndexed="False" IsShadow="False" IsAlternateKey="False" IsConcurrencyToken="False" IsUnicode="True" ValueGenerated="None" />
+<Node Id = "Enterprise.Name" Label="Name (string)" Name="Name" Category="Property Required" Type="string" MaxLength="(50)" Field="" PropertyAccessMode="PropertyAccessMode.Default" BeforeSaveBehavior="PropertySaveBehavior.Save" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="MaxLength: 50" IsPrimaryKey="False" IsForeignKey="False" IsRequired="True" IsIndexed="False" IsShadow="False" IsAlternateKey="False" IsConcurrencyToken="False" IsUnicode="True" ValueGenerated="None" />
+<Node Id = "Enterprise.UpdateAt" Label="UpdateAt (DateTime?)" Name="UpdateAt" Category="Property Optional" Type="DateTime?" MaxLength="None" Field="" PropertyAccessMode="PropertyAccessMode.Default" BeforeSaveBehavior="PropertySaveBehavior.Save" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="" IsPrimaryKey="False" IsForeignKey="False" IsRequired="False" IsIndexed="False" IsShadow="False" IsAlternateKey="False" IsConcurrencyToken="False" IsUnicode="True" ValueGenerated="None" />
+<Node Id = "Enterprise.UpdateBy" Label="UpdateBy (string)" Name="UpdateBy" Category="Property Required" Type="string" MaxLength="None" Field="" PropertyAccessMode="PropertyAccessMode.Default" BeforeSaveBehavior="PropertySaveBehavior.Save" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="" IsPrimaryKey="False" IsForeignKey="False" IsRequired="True" IsIndexed="False" IsShadow="False" IsAlternateKey="False" IsConcurrencyToken="False" IsUnicode="True" ValueGenerated="None" />
+<Node Id = "Enterprise.UsersId" Label="UsersId (int)" Name="UsersId" Category="Property Foreign" Type="int" MaxLength="None" Field="nofield" PropertyAccessMode="PropertyAccessMode.Default" BeforeSaveBehavior="PropertySaveBehavior.Save" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="" IsPrimaryKey="False" IsForeignKey="True" IsRequired="True" IsIndexed="True" IsShadow="True" IsAlternateKey="False" IsConcurrencyToken="False" IsUnicode="True" ValueGenerated="None" />
+<Node Id = "InvoiceLine" Label="InvoiceLine" Name="InvoiceLine" BaseClass="" IsAbstract="False" ChangeTrackingStrategy="ChangeTrackingStrategy.Snapshot"  Annotations="Relational:TableName: InvoiceLine
+RelationshipDiscoveryConvention:NavigationCandidates: System.Collections.Immutable.ImmutableSortedDictionary`2[System.Reflection.PropertyInfo,System.ValueTuple`2[System.Type,System.Nullable`1[System.Boolean]]]" Category="EntityType" Group="Expanded" />
+<Node Id = "Invoice.Id" Label="Id (int)" Name="Id" Category="Property Primary" Type="int" MaxLength="None" Field="" PropertyAccessMode="PropertyAccessMode.Default" BeforeSaveBehavior="PropertySaveBehavior.Save" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="SqlServer:ValueGenerationStrategy: IdentityColumn" IsPrimaryKey="True" IsForeignKey="False" IsRequired="True" IsIndexed="False" IsShadow="False" IsAlternateKey="False" IsConcurrencyToken="False" IsUnicode="True" ValueGenerated="ValueGenerated.OnAdd" />
+<Node Id = "Invoice.InvoiveLine" Label="InvoiveLine (*)" Name="InvoiveLine" Category="Navigation Collection" Type="ICollection&lt;InvoiceLine&gt;"  Field="" Dependent="InvoiceLine" Principal="" Inverse="Invoice" PropertyAccessMode="PropertyAccessMode.Default" />
+<Node Id = "Invoice.enterprise" Label="enterprise (1)" Name="enterprise" Category="Navigation Property" Type="Enterprise"  Field="" Dependent="" Principal="Enterprise" Inverse="Invoices" PropertyAccessMode="PropertyAccessMode.Default" />
+<Node Id = "Invoice.CreateAt" Label="CreateAt (DateTime)" Name="CreateAt" Category="Property Required" Type="DateTime" MaxLength="None" Field="" PropertyAccessMode="PropertyAccessMode.Default" BeforeSaveBehavior="PropertySaveBehavior.Save" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="" IsPrimaryKey="False" IsForeignKey="False" IsRequired="True" IsIndexed="False" IsShadow="False" IsAlternateKey="False" IsConcurrencyToken="False" IsUnicode="True" ValueGenerated="None" />
+<Node Id = "Invoice.CreateBy" Label="CreateBy (string)" Name="CreateBy" Category="Property Required" Type="string" MaxLength="None" Field="" PropertyAccessMode="PropertyAccessMode.Default" BeforeSaveBehavior="PropertySaveBehavior.Save" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="" IsPrimaryKey="False" IsForeignKey="False" IsRequired="True" IsIndexed="False" IsShadow="False" IsAlternateKey="False" IsConcurrencyToken="False" IsUnicode="True" ValueGenerated="None" />
+<Node Id = "Invoice.DeleteAt" Label="DeleteAt (DateTime?)" Name="DeleteAt" Category="Property Optional" Type="DateTime?" MaxLength="None" Field="" PropertyAccessMode="PropertyAccessMode.Default" BeforeSaveBehavior="PropertySaveBehavior.Save" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="" IsPrimaryKey="False" IsForeignKey="False" IsRequired="False" IsIndexed="False" IsShadow="False" IsAlternateKey="False" IsConcurrencyToken="False" IsUnicode="True" ValueGenerated="None" />
+<Node Id = "Invoice.DeleteBy" Label="DeleteBy (string)" Name="DeleteBy" Category="Property Required" Type="string" MaxLength="None" Field="" PropertyAccessMode="PropertyAccessMode.Default" BeforeSaveBehavior="PropertySaveBehavior.Save" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="" IsPrimaryKey="False" IsForeignKey="False" IsRequired="True" IsIndexed="False" IsShadow="False" IsAlternateKey="False" IsConcurrencyToken="False" IsUnicode="True" ValueGenerated="None" />
+<Node Id = "Invoice.IsDeleted" Label="IsDeleted (bool)" Name="IsDeleted" Category="Property Required" Type="bool" MaxLength="None" Field="" PropertyAccessMode="PropertyAccessMode.Default" BeforeSaveBehavior="PropertySaveBehavior.Save" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="" IsPrimaryKey="False" IsForeignKey="False" IsRequired="True" IsIndexed="False" IsShadow="False" IsAlternateKey="False" IsConcurrencyToken="False" IsUnicode="True" ValueGenerated="None" />
+<Node Id = "Invoice.NumeroFactura" Label="NumeroFactura (string)" Name="NumeroFactura" Category="Property Required" Type="string" MaxLength="None" Field="" PropertyAccessMode="PropertyAccessMode.Default" BeforeSaveBehavior="PropertySaveBehavior.Save" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="" IsPrimaryKey="False" IsForeignKey="False" IsRequired="True" IsIndexed="False" IsShadow="False" IsAlternateKey="False" IsConcurrencyToken="False" IsUnicode="True" ValueGenerated="None" />
+<Node Id = "Invoice.TotalFactura" Label="TotalFactura (decimal)" Name="TotalFactura" Category="Property Required" Type="decimal" MaxLength="None" Field="" PropertyAccessMode="PropertyAccessMode.Default" BeforeSaveBehavior="PropertySaveBehavior.Save" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="" IsPrimaryKey="False" IsForeignKey="False" IsRequired="True" IsIndexed="False" IsShadow="False" IsAlternateKey="False" IsConcurrencyToken="False" IsUnicode="True" ValueGenerated="None" />
+<Node Id = "Invoice.UpdateAt" Label="UpdateAt (DateTime?)" Name="UpdateAt" Category="Property Optional" Type="DateTime?" MaxLength="None" Field="" PropertyAccessMode="PropertyAccessMode.Default" BeforeSaveBehavior="PropertySaveBehavior.Save" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="" IsPrimaryKey="False" IsForeignKey="False" IsRequired="False" IsIndexed="False" IsShadow="False" IsAlternateKey="False" IsConcurrencyToken="False" IsUnicode="True" ValueGenerated="None" />
+<Node Id = "Invoice.UpdateBy" Label="UpdateBy (string)" Name="UpdateBy" Category="Property Required" Type="string" MaxLength="None" Field="" PropertyAccessMode="PropertyAccessMode.Default" BeforeSaveBehavior="PropertySaveBehavior.Save" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="" IsPrimaryKey="False" IsForeignKey="False" IsRequired="True" IsIndexed="False" IsShadow="False" IsAlternateKey="False" IsConcurrencyToken="False" IsUnicode="True" ValueGenerated="None" />
+<Node Id = "Invoice.enterpriseId" Label="enterpriseId (int)" Name="enterpriseId" Category="Property Foreign" Type="int" MaxLength="None" Field="nofield" PropertyAccessMode="PropertyAccessMode.Default" BeforeSaveBehavior="PropertySaveBehavior.Save" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="" IsPrimaryKey="False" IsForeignKey="True" IsRequired="True" IsIndexed="True" IsShadow="True" IsAlternateKey="False" IsConcurrencyToken="False" IsUnicode="True" ValueGenerated="None" />
+<Node Id = "Users" Label="Users" Name="Users" BaseClass="" IsAbstract="False" ChangeTrackingStrategy="ChangeTrackingStrategy.Snapshot"  Annotations="Relational:TableName: Users
+RelationshipDiscoveryConvention:NavigationCandidates: System.Collections.Immutable.ImmutableSortedDictionary`2[System.Reflection.PropertyInfo,System.ValueTuple`2[System.Type,System.Nullable`1[System.Boolean]]]" Category="EntityType" Group="Expanded" />
+<Node Id = "InvoiceLine.Id" Label="Id (int)" Name="Id" Category="Property Primary" Type="int" MaxLength="None" Field="" PropertyAccessMode="PropertyAccessMode.Default" BeforeSaveBehavior="PropertySaveBehavior.Save" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="SqlServer:ValueGenerationStrategy: IdentityColumn" IsPrimaryKey="True" IsForeignKey="False" IsRequired="True" IsIndexed="False" IsShadow="False" IsAlternateKey="False" IsConcurrencyToken="False" IsUnicode="True" ValueGenerated="ValueGenerated.OnAdd" />
+<Node Id = "InvoiceLine.Invoice" Label="Invoice (1)" Name="Invoice" Category="Navigation Property" Type="Invoice"  Field="" Dependent="" Principal="Invoice" Inverse="InvoiveLine" PropertyAccessMode="PropertyAccessMode.Default" />
+<Node Id = "InvoiceLine.Cantidad" Label="Cantidad (int)" Name="Cantidad" Category="Property Required" Type="int" MaxLength="None" Field="" PropertyAccessMode="PropertyAccessMode.Default" BeforeSaveBehavior="PropertySaveBehavior.Save" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="" IsPrimaryKey="False" IsForeignKey="False" IsRequired="True" IsIndexed="False" IsShadow="False" IsAlternateKey="False" IsConcurrencyToken="False" IsUnicode="True" ValueGenerated="None" />
+<Node Id = "InvoiceLine.CreateAt" Label="CreateAt (DateTime)" Name="CreateAt" Category="Property Required" Type="DateTime" MaxLength="None" Field="" PropertyAccessMode="PropertyAccessMode.Default" BeforeSaveBehavior="PropertySaveBehavior.Save" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="" IsPrimaryKey="False" IsForeignKey="False" IsRequired="True" IsIndexed="False" IsShadow="False" IsAlternateKey="False" IsConcurrencyToken="False" IsUnicode="True" ValueGenerated="None" />
+<Node Id = "InvoiceLine.CreateBy" Label="CreateBy (string)" Name="CreateBy" Category="Property Required" Type="string" MaxLength="None" Field="" PropertyAccessMode="PropertyAccessMode.Default" BeforeSaveBehavior="PropertySaveBehavior.Save" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="" IsPrimaryKey="False" IsForeignKey="False" IsRequired="True" IsIndexed="False" IsShadow="False" IsAlternateKey="False" IsConcurrencyToken="False" IsUnicode="True" ValueGenerated="None" />
+<Node Id = "InvoiceLine.DeleteAt" Label="DeleteAt (DateTime?)" Name="DeleteAt" Category="Property Optional" Type="DateTime?" MaxLength="None" Field="" PropertyAccessMode="PropertyAccessMode.Default" BeforeSaveBehavior="PropertySaveBehavior.Save" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="" IsPrimaryKey="False" IsForeignKey="False" IsRequired="False" IsIndexed="False" IsShadow="False" IsAlternateKey="False" IsConcurrencyToken="False" IsUnicode="True" ValueGenerated="None" />
+<Node Id = "InvoiceLine.DeleteBy" Label="DeleteBy (string)" Name="DeleteBy" Category="Property Required" Type="string" MaxLength="None" Field="" PropertyAccessMode="PropertyAccessMode.Default" BeforeSaveBehavior="PropertySaveBehavior.Save" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="" IsPrimaryKey="False" IsForeignKey="False" IsRequired="True" IsIndexed="False" IsShadow="False" IsAlternateKey="False" IsConcurrencyToken="False" IsUnicode="True" ValueGenerated="None" />
+<Node Id = "InvoiceLine.Description" Label="Description (string)" Name="Description" Category="Property Required" Type="string" MaxLength="None" Field="" PropertyAccessMode="PropertyAccessMode.Default" BeforeSaveBehavior="PropertySaveBehavior.Save" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="" IsPrimaryKey="False" IsForeignKey="False" IsRequired="True" IsIndexed="False" IsShadow="False" IsAlternateKey="False" IsConcurrencyToken="False" IsUnicode="True" ValueGenerated="None" />
+<Node Id = "InvoiceLine.InvoiceId" Label="InvoiceId (int)" Name="InvoiceId" Category="Property Foreign" Type="int" MaxLength="None" Field="nofield" PropertyAccessMode="PropertyAccessMode.Default" BeforeSaveBehavior="PropertySaveBehavior.Save" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="" IsPrimaryKey="False" IsForeignKey="True" IsRequired="True" IsIndexed="True" IsShadow="True" IsAlternateKey="False" IsConcurrencyToken="False" IsUnicode="True" ValueGenerated="None" />
+<Node Id = "InvoiceLine.IsDeleted" Label="IsDeleted (bool)" Name="IsDeleted" Category="Property Required" Type="bool" MaxLength="None" Field="" PropertyAccessMode="PropertyAccessMode.Default" BeforeSaveBehavior="PropertySaveBehavior.Save" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="" IsPrimaryKey="False" IsForeignKey="False" IsRequired="True" IsIndexed="False" IsShadow="False" IsAlternateKey="False" IsConcurrencyToken="False" IsUnicode="True" ValueGenerated="None" />
+<Node Id = "InvoiceLine.PrecioUnitario" Label="PrecioUnitario (decimal)" Name="PrecioUnitario" Category="Property Required" Type="decimal" MaxLength="None" Field="" PropertyAccessMode="PropertyAccessMode.Default" BeforeSaveBehavior="PropertySaveBehavior.Save" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="" IsPrimaryKey="False" IsForeignKey="False" IsRequired="True" IsIndexed="False" IsShadow="False" IsAlternateKey="False" IsConcurrencyToken="False" IsUnicode="True" ValueGenerated="None" />
+<Node Id = "InvoiceLine.TotalLinea" Label="TotalLinea (decimal)" Name="TotalLinea" Category="Property Required" Type="decimal" MaxLength="None" Field="" PropertyAccessMode="PropertyAccessMode.Default" BeforeSaveBehavior="PropertySaveBehavior.Save" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="" IsPrimaryKey="False" IsForeignKey="False" IsRequired="True" IsIndexed="False" IsShadow="False" IsAlternateKey="False" IsConcurrencyToken="False" IsUnicode="True" ValueGenerated="None" />
+<Node Id = "InvoiceLine.UpdateAt" Label="UpdateAt (DateTime?)" Name="UpdateAt" Category="Property Optional" Type="DateTime?" MaxLength="None" Field="" PropertyAccessMode="PropertyAccessMode.Default" BeforeSaveBehavior="PropertySaveBehavior.Save" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="" IsPrimaryKey="False" IsForeignKey="False" IsRequired="False" IsIndexed="False" IsShadow="False" IsAlternateKey="False" IsConcurrencyToken="False" IsUnicode="True" ValueGenerated="None" />
+<Node Id = "InvoiceLine.UpdateBy" Label="UpdateBy (string)" Name="UpdateBy" Category="Property Required" Type="string" MaxLength="None" Field="" PropertyAccessMode="PropertyAccessMode.Default" BeforeSaveBehavior="PropertySaveBehavior.Save" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="" IsPrimaryKey="False" IsForeignKey="False" IsRequired="True" IsIndexed="False" IsShadow="False" IsAlternateKey="False" IsConcurrencyToken="False" IsUnicode="True" ValueGenerated="None" />
+<Node Id = "Users" Label="Users" Name="Users" BaseClass="" IsAbstract="False" ChangeTrackingStrategy="ChangeTrackingStrategy.Snapshot"  Annotations="" Category="EntityType" Group="Expanded" />
+<Node Id = "Users.Id" Label="Id (int)" Name="Id" Category="Property Primary" Type="int" MaxLength="None" Field="" PropertyAccessMode="PropertyAccessMode.Default" BeforeSaveBehavior="PropertySaveBehavior.Save" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="SqlServer:ValueGenerationStrategy: IdentityColumn" IsPrimaryKey="True" IsForeignKey="False" IsRequired="True" IsIndexed="False" IsShadow="False" IsAlternateKey="False" IsConcurrencyToken="False" IsUnicode="True" ValueGenerated="ValueGenerated.OnAdd" />
+<Node Id = "Users.CreateAt" Label="CreateAt (DateTime)" Name="CreateAt" Category="Property Required" Type="DateTime" MaxLength="None" Field="" PropertyAccessMode="PropertyAccessMode.Default" BeforeSaveBehavior="PropertySaveBehavior.Save" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="" IsPrimaryKey="False" IsForeignKey="False" IsRequired="True" IsIndexed="False" IsShadow="False" IsAlternateKey="False" IsConcurrencyToken="False" IsUnicode="True" ValueGenerated="None" />
+<Node Id = "Users.CreateBy" Label="CreateBy (string)" Name="CreateBy" Category="Property Required" Type="string" MaxLength="None" Field="" PropertyAccessMode="PropertyAccessMode.Default" BeforeSaveBehavior="PropertySaveBehavior.Save" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="" IsPrimaryKey="False" IsForeignKey="False" IsRequired="True" IsIndexed="False" IsShadow="False" IsAlternateKey="False" IsConcurrencyToken="False" IsUnicode="True" ValueGenerated="None" />
+<Node Id = "Users.DeleteAt" Label="DeleteAt (DateTime?)" Name="DeleteAt" Category="Property Optional" Type="DateTime?" MaxLength="None" Field="" PropertyAccessMode="PropertyAccessMode.Default" BeforeSaveBehavior="PropertySaveBehavior.Save" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="" IsPrimaryKey="False" IsForeignKey="False" IsRequired="False" IsIndexed="False" IsShadow="False" IsAlternateKey="False" IsConcurrencyToken="False" IsUnicode="True" ValueGenerated="None" />
+<Node Id = "Users.DeleteBy" Label="DeleteBy (string)" Name="DeleteBy" Category="Property Required" Type="string" MaxLength="None" Field="" PropertyAccessMode="PropertyAccessMode.Default" BeforeSaveBehavior="PropertySaveBehavior.Save" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="" IsPrimaryKey="False" IsForeignKey="False" IsRequired="True" IsIndexed="False" IsShadow="False" IsAlternateKey="False" IsConcurrencyToken="False" IsUnicode="True" ValueGenerated="None" />
+<Node Id = "Users.Email" Label="Email (string)" Name="Email" Category="Property Required" Type="string" MaxLength="None" Field="" PropertyAccessMode="PropertyAccessMode.Default" BeforeSaveBehavior="PropertySaveBehavior.Save" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="" IsPrimaryKey="False" IsForeignKey="False" IsRequired="True" IsIndexed="False" IsShadow="False" IsAlternateKey="False" IsConcurrencyToken="False" IsUnicode="True" ValueGenerated="None" />
+<Node Id = "Users.IsDeleted" Label="IsDeleted (bool)" Name="IsDeleted" Category="Property Required" Type="bool" MaxLength="None" Field="" PropertyAccessMode="PropertyAccessMode.Default" BeforeSaveBehavior="PropertySaveBehavior.Save" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="" IsPrimaryKey="False" IsForeignKey="False" IsRequired="True" IsIndexed="False" IsShadow="False" IsAlternateKey="False" IsConcurrencyToken="False" IsUnicode="True" ValueGenerated="None" />
+<Node Id = "Users.Password" Label="Password (string)" Name="Password" Category="Property Required" Type="string" MaxLength="(50)" Field="" PropertyAccessMode="PropertyAccessMode.Default" BeforeSaveBehavior="PropertySaveBehavior.Save" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="MaxLength: 50" IsPrimaryKey="False" IsForeignKey="False" IsRequired="True" IsIndexed="False" IsShadow="False" IsAlternateKey="False" IsConcurrencyToken="False" IsUnicode="True" ValueGenerated="None" />
+<Node Id = "Users.Rol" Label="Rol (Rol)" Name="Rol" Category="Property Required" Type="Rol" MaxLength="None" Field="" PropertyAccessMode="PropertyAccessMode.Default" BeforeSaveBehavior="PropertySaveBehavior.Save" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="" IsPrimaryKey="False" IsForeignKey="False" IsRequired="True" IsIndexed="False" IsShadow="False" IsAlternateKey="False" IsConcurrencyToken="False" IsUnicode="True" ValueGenerated="None" />
+<Node Id = "Users.UpdateAt" Label="UpdateAt (DateTime?)" Name="UpdateAt" Category="Property Optional" Type="DateTime?" MaxLength="None" Field="" PropertyAccessMode="PropertyAccessMode.Default" BeforeSaveBehavior="PropertySaveBehavior.Save" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="" IsPrimaryKey="False" IsForeignKey="False" IsRequired="False" IsIndexed="False" IsShadow="False" IsAlternateKey="False" IsConcurrencyToken="False" IsUnicode="True" ValueGenerated="None" />
+<Node Id = "Users.UpdateBy" Label="UpdateBy (string)" Name="UpdateBy" Category="Property Required" Type="string" MaxLength="None" Field="" PropertyAccessMode="PropertyAccessMode.Default" BeforeSaveBehavior="PropertySaveBehavior.Save" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="" IsPrimaryKey="False" IsForeignKey="False" IsRequired="True" IsIndexed="False" IsShadow="False" IsAlternateKey="False" IsConcurrencyToken="False" IsUnicode="True" ValueGenerated="None" />
+<Node Id = "Users.UserName" Label="UserName (string)" Name="UserName" Category="Property Required" Type="string" MaxLength="(50)" Field="" PropertyAccessMode="PropertyAccessMode.Default" BeforeSaveBehavior="PropertySaveBehavior.Save" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="MaxLength: 50" IsPrimaryKey="False" IsForeignKey="False" IsRequired="True" IsIndexed="False" IsShadow="False" IsAlternateKey="False" IsConcurrencyToken="False" IsUnicode="True" ValueGenerated="None" />
+  </Nodes>
+  <Links>
+<Link Source = "IModel" Target="Enterprise" Category="Contains" />
+<Link Source = "IModel" Target="Invoice" Category="Contains" />
+<Link Source = "Enterprise" Target="Enterprise.Invoices" Category="Contains" />
+<Link Source = "Enterprise" Target="Enterprise.Users" Category="Contains" />
+<Link Source = "Enterprise" Target="Enterprise.Id" Category="Contains" />
+<Link Source="Enterprise" Target="Users" From="Enterprise.UsersId" To="Users.Id" Name="Enterprise -> Users" Annotations="" IsUnique="False" Label="1:*" Category="Foreign Key" />
+<Link Source = "Enterprise" Target="Enterprise.Address" Category="Contains" />
+<Link Source = "Enterprise" Target="Enterprise.CreateAt" Category="Contains" />
+<Link Source = "Enterprise" Target="Enterprise.CreateBy" Category="Contains" />
+<Link Source = "Enterprise" Target="Enterprise.DeleteAt" Category="Contains" />
+<Link Source = "Enterprise" Target="Enterprise.DeleteBy" Category="Contains" />
+<Link Source = "Enterprise" Target="Enterprise.IsDeleted" Category="Contains" />
+<Link Source = "Enterprise" Target="Enterprise.Name" Category="Contains" />
+<Link Source = "Enterprise" Target="Enterprise.UpdateAt" Category="Contains" />
+<Link Source = "Enterprise" Target="Enterprise.UpdateBy" Category="Contains" />
+<Link Source = "Enterprise" Target="Enterprise.UsersId" Category="Contains" />
+<Link Source = "IModel" Target="InvoiceLine" Category="Contains" />
+<Link Source = "Invoice" Target="Invoice.InvoiveLine" Category="Contains" />
+<Link Source = "Invoice" Target="Invoice.enterprise" Category="Contains" />
+<Link Source = "Invoice" Target="Invoice.Id" Category="Contains" />
+<Link Source="Invoice" Target="Enterprise" From="Invoice.enterpriseId" To="Enterprise.Id" Name="Invoice -> Enterprise" Annotations="" IsUnique="False" Label="1:*" Category="Foreign Key" />
+<Link Source = "Invoice" Target="Invoice.CreateAt" Category="Contains" />
+<Link Source = "Invoice" Target="Invoice.CreateBy" Category="Contains" />
+<Link Source = "Invoice" Target="Invoice.DeleteAt" Category="Contains" />
+<Link Source = "Invoice" Target="Invoice.DeleteBy" Category="Contains" />
+<Link Source = "Invoice" Target="Invoice.IsDeleted" Category="Contains" />
+<Link Source = "Invoice" Target="Invoice.NumeroFactura" Category="Contains" />
+<Link Source = "Invoice" Target="Invoice.TotalFactura" Category="Contains" />
+<Link Source = "Invoice" Target="Invoice.UpdateAt" Category="Contains" />
+<Link Source = "Invoice" Target="Invoice.UpdateBy" Category="Contains" />
+<Link Source = "Invoice" Target="Invoice.enterpriseId" Category="Contains" />
+<Link Source = "IModel" Target="Users" Category="Contains" />
+<Link Source = "InvoiceLine" Target="InvoiceLine.Invoice" Category="Contains" />
+<Link Source = "InvoiceLine" Target="InvoiceLine.Id" Category="Contains" />
+<Link Source="InvoiceLine" Target="Invoice" From="InvoiceLine.InvoiceId" To="Invoice.Id" Name="InvoiceLine -> Invoice" Annotations="" IsUnique="False" Label="1:*" Category="Foreign Key" />
+<Link Source = "InvoiceLine" Target="InvoiceLine.Cantidad" Category="Contains" />
+<Link Source = "InvoiceLine" Target="InvoiceLine.CreateAt" Category="Contains" />
+<Link Source = "InvoiceLine" Target="InvoiceLine.CreateBy" Category="Contains" />
+<Link Source = "InvoiceLine" Target="InvoiceLine.DeleteAt" Category="Contains" />
+<Link Source = "InvoiceLine" Target="InvoiceLine.DeleteBy" Category="Contains" />
+<Link Source = "InvoiceLine" Target="InvoiceLine.Description" Category="Contains" />
+<Link Source = "InvoiceLine" Target="InvoiceLine.InvoiceId" Category="Contains" />
+<Link Source = "InvoiceLine" Target="InvoiceLine.IsDeleted" Category="Contains" />
+<Link Source = "InvoiceLine" Target="InvoiceLine.PrecioUnitario" Category="Contains" />
+<Link Source = "InvoiceLine" Target="InvoiceLine.TotalLinea" Category="Contains" />
+<Link Source = "InvoiceLine" Target="InvoiceLine.UpdateAt" Category="Contains" />
+<Link Source = "InvoiceLine" Target="InvoiceLine.UpdateBy" Category="Contains" />
+<Link Source = "IModel" Target="Users" Category="Contains" />
+<Link Source = "Users" Target="Users.Id" Category="Contains" />
+<Link Source = "Users" Target="Users.CreateAt" Category="Contains" />
+<Link Source = "Users" Target="Users.CreateBy" Category="Contains" />
+<Link Source = "Users" Target="Users.DeleteAt" Category="Contains" />
+<Link Source = "Users" Target="Users.DeleteBy" Category="Contains" />
+<Link Source = "Users" Target="Users.Email" Category="Contains" />
+<Link Source = "Users" Target="Users.IsDeleted" Category="Contains" />
+<Link Source = "Users" Target="Users.Password" Category="Contains" />
+<Link Source = "Users" Target="Users.Rol" Category="Contains" />
+<Link Source = "Users" Target="Users.UpdateAt" Category="Contains" />
+<Link Source = "Users" Target="Users.UpdateBy" Category="Contains" />
+<Link Source = "Users" Target="Users.UserName" Category="Contains" />
+  </Links>
+  <Styles>
+    <Style TargetType="Node" GroupLabel="EntityType" ValueLabel="True">
+      <Condition Expression="HasCategory('EntityType')" />
+      <Setter Property="Background" Value="#FFC0C0C0" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Property Primary" ValueLabel="True">
+      <Condition Expression="HasCategory('Property Primary')" />
+      <Setter Property="Background" Value="#FF008000" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Property Optional" ValueLabel="True">
+      <Condition Expression="HasCategory('Property Optional')" />
+      <Setter Property="Background" Value="#FF808040" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Property Foreign" ValueLabel="True">
+      <Condition Expression="HasCategory('Property Foreign')" />
+      <Setter Property="Background" Value="#FF8080FF" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Property Required" ValueLabel="True">
+      <Condition Expression="HasCategory('Property Required')" />
+      <Setter Property="Background" Value="#FFC0A000" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Navigation Property" ValueLabel="True">
+      <Condition Expression="HasCategory('Navigation Property')" />
+      <Setter Property="Background" Value="#FF990000" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Navigation Collection" ValueLabel="True">
+      <Condition Expression="HasCategory('Navigation Collection')" />
+      <Setter Property="Background" Value="#FFFF3232" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Model" ValueLabel="True">
+      <Condition Expression="HasCategory('Model')" />
+      <Setter Property="Background" Value="#FFFFFFFF" />
+    </Style>
+  </Styles>
+  <Properties>
+    <Property Id="Name" Group="Model Properties" DataType="System.String" />
+    <Property Id="Field"  Description="Backing field" Group="Model Properties" DataType="System.String" />
+    <Property Id="Type"  Description="CLR data type" Group="Model Properties" DataType="System.String" />
+    <Property Id="To" Description="Source property" Group="Model Properties" DataType="System.String" />
+    <Property Id="From" Description="Target property" Group="Model Properties" DataType="System.String" />
+    <Property Id="Dependent" Description="Dependent entity" Group="Model Properties" DataType="System.String" />
+    <Property Id="Inverse" Description="Inverse entity" Group="Model Properties" DataType="System.String" />
+    <Property Id="Principal" Description="Principal entity" Group="Model Properties" DataType="System.String" />    
+    <Property Id="Annotations" Description="Annotations" Group="Model Properties" DataType="System.String" />
+    <Property Id="BaseClass"  Description="Base class" Group="Model Properties" DataType="System.String" />
+    <Property Id="ChangeTrackingStrategy" Description="Change tracking strategy" Group="Model Properties" DataType="System.String" />
+    <Property Id="IsUnique" Group="Model Properties" DataType="System.Boolean" />
+    <Property Id="IsAbstract" Group="Model Properties" DataType="System.Boolean" />
+    <Property Id="ProductVersion" Label="Product Version" Description="EF Core product version" Group="Model Properties" DataType="System.String" />
+    <Property Id="IsIndexed" Group="Property Flags" DataType="System.Boolean" />
+    <Property Id="IsRequired" Group="Property Flags" DataType="System.Boolean" />
+    <Property Id="IsPrimaryKey" Group="Property Flags" DataType="System.Boolean" />
+    <Property Id="IsForeignKey" Group="Property Flags" DataType="System.Boolean" />
+    <Property Id="IsShadow" Group="Property Flags" DataType="System.Boolean" />
+    <Property Id="IsAlternateKey" Group="Property Flags" DataType="System.Boolean" />
+    <Property Id="IsConcurrencyToken" Group="Property Flags" DataType="System.Boolean" />
+    <Property Id="IsIndexed" Group="Property Flags" DataType="System.Boolean" />
+    <Property Id="IsUnicode" Group="Property Flags" DataType="System.Boolean" />
+    <Property Id="ValueGenerated" Group="Property Flags" DataType="System.String" />
+    <Property Id="BeforeSaveBehavior" Group="Property Flags" DataType="System.String" />
+    <Property Id="AfterSaveBehavior" Group="Property Flags" DataType="System.String" />
+    <Property Id="PropertyAccessMode" Group="Property Flags" DataType="System.String" />
+  </Properties>
+</DirectedGraph>
