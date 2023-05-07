@@ -14,7 +14,7 @@ namespace Gestion_facturas.Models.DataModels
         public Users Users { get; set; } = new Users();
 
         
-        public ICollection<Invoice> Invoices { get; set; } = new List<Invoice>();
+       public ICollection<Invoice> Invoices { get; set; } = new List<Invoice>();
 
     }
 }
